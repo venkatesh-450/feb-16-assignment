@@ -1,0 +1,46 @@
+OBJECT MACROS----->
+#include<stdio.h>
+#define PI 3.14
+void main(){
+float area,r=5;
+area=PI*r*r;
+printf("area of circle if %f",area);
+}
+FUNCTION MACROS----->
+#include<stdio.h>
+#define SUM(a,b) a+b
+void main(){
+int s,a=6,b=7;
+s=SUM(a,b);
+printf("addition is %d",s);
+}
+CONDITIONAL MACROS----->
+#include<stdio.h>
+#define X 1
+#define UNIX 1
+#define LINUX 2
+#define WINDOWS 3
+void main(){
+#if(X==UNIX)
+int a=10;
+int b=60;
+#elif(X==LINUX)
+int a=40;
+int b=80;
+#else
+int a=30;
+int b=60;
+#endif
+int c=a+b;
+printf("%d",c);
+}
+
+PREDEFINED MACROS----->
+#include<stdio.h>
+int main(){
+	printf("\nfile = %s",_FILE_);
+	printf("\ntime=%s",_TIME_);
+	printf("\n%d",_LINE_);
+	printf("\n%s",_DATE_);
+	
+}
